@@ -1,6 +1,6 @@
 # Multi-party private Set Union (MPSU)
 
-This is the implementation of our paper: **Breaking Free: Efficient Multi-Party Private Set Union Without Non-Collusion Assumptions**[[ePrint](https://eprint.iacr.org/2024/1146)]. 
+This is the implementation of our paper: **Efficient Multi-Party Private Set Union Without Non-Collusion Assumptions** [[ePrint](https://eprint.iacr.org/2024/1146)]. 
 
 This repository implements two MPSU protocols: 
 
