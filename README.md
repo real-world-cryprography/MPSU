@@ -164,6 +164,29 @@ docker run -it --name your-container-name kafei2cy/mpsu /bin/bash
 ```
 
 - `--name your-container-name` gives your container a name for easier reference.
+- 
+### Test for SK-MPSU
+
+```shell
+cd /home/MPSU/SKMPSU/build/
+#in /home/MPSU/SKMPSU/build/
+#print help information
+./main -h
+#The other commands are the same as above
+```
+
+### Test for PK-MPSU
+
+```shell
+cd /home/MPSU/PKMPSU/build/
+#in /home/MPSU/PKMPSU/build/
+#print help information
+./main -h
+#The other commands are the same as above
+```
+
+
+
 
 
 
