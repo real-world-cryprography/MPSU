@@ -139,6 +139,31 @@ Run PK-MPSU of 3 parties, each with set size `2^12`:
 ./main -psu -k 3 -nn 12 -r 0 & ./main -psu -k 3 -nn 12 -r 1 & ./main -psu -k 3 -nn 12 -r 2
 ```
 
+## Docker Quick Start
+
+Docker makes it easy to create, deploy, and run applications by using containers. Here are some quick tips to get you started with Docker:
+
+### Prerequisites
+
+- Ensure you have Docker installed on your machine. You can download Docker from the [official website](https://www.docker.com/products/docker-desktop).
+
+### Pulling the docker image
+
+To pull the Docker image, use the following command:
+
+```bash
+docker pull kafei2cy/mpsu:latest
+```
+
+### Running a Docker Container
+
+To run a Docker container from the image you pulled and access the Container Shell, use the following command:
+
+```sh
+docker run -it --name your-container-name kafei2cy/mpsu /bin/bash
+```
+
+- `--name your-container-name` gives your container a name for easier reference.
 
 
 
