@@ -138,7 +138,43 @@ Run PK-MPSU of 3 parties, each with set size `2^12`:
 ./main -preGen -k 3 -nn 12 -r 0 & ./main -preGen -k 3 -nn 12 -r 1 & ./main -preGen -k 3 -nn 12 -r 2
 ./main -psu -k 3 -nn 12 -r 0 & ./main -psu -k 3 -nn 12 -r 1 & ./main -psu -k 3 -nn 12 -r 2
 ```
+## Auto Test
 
+### Auto Test for SKMPSU
+
+If you want to use the automated test scripts we provide, you first need to complete the building step and then follow the instructions below.
+
+```shell
+#in MPSU/autoTestShell
+#copy the script to MPSU/SKMPSU/build
+cp autoTestSK.sh ../SKMPSU/build/
+
+#in MPSU/SKMPSU/build
+chmod +x autoTestSK.sh
+
+#run the shell script
+#number of parties {3,4,5,7,9,10}, if you want to change it, you can directly change the k_values in the shell script
+#logarithm of set size from 10 to 12, step 2
+./autoTestSK.sh -start 10 -end 12 -step 2
+```
+
+### Auto Test for PKMPSU
+
+If you want to use the automated test scripts we provide, you first need to complete the building step and then follow the instructions below.
+
+```shell
+#in MPSU/autoTestShell
+#copy the script to MPSU/PKMPSU/build
+cp autoTestPK.sh ../PKMPSU/build/
+
+#in MPSU/PKMPSU/build
+chmod +x autoTestPK.sh
+
+#run the shell
+#number of parties {3,4,5,7,9,10}, if you want to change it, you can directly change the k_values in the shell script
+#logarithm of set size from 10 to 12, step 2
+./autoTestPK.sh -start 10 -end 12 -step 2
+```
 ## Docker Quick Start
 
 Docker makes it easy to create, deploy, and run applications by using containers. Here are some quick tips to get you started with Docker:
@@ -184,45 +220,6 @@ cd /home/MPSU/PKMPSU/build/
 ./main -h
 #The other commands are the same as above
 ```
-
-## Auto Test
-
-### Auto Test for SKMPSU
-
-If you want to use the automated test scripts we provide, you first need to complete the building step and then follow the instructions below.
-
-```shell
-#in MPSU/autoTestShell
-#copy the script to MPSU/SKMPSU/build
-cp autoTestSK.sh ../SKMPSU/build/
-
-#in MPSU/SKMPSU/build
-chmod +x autoTestSK.sh
-
-#run the shell script
-#number of parties {3,4,5,7,9,10}, if you want to change it, you can directly change the k_values in the shell script
-#logarithm of set size from 10 to 12, step 2
-./autoTestSK.sh -start 10 -end 12 -step 2
-```
-
-### Auto Test for PKMPSU
-
-If you want to use the automated test scripts we provide, you first need to complete the building step and then follow the instructions below.
-
-```shell
-#in MPSU/autoTestShell
-#copy the script to MPSU/PKMPSU/build
-cp autoTestPK.sh ../PKMPSU/build/
-
-#in MPSU/PKMPSU/build
-chmod +x autoTestPK.sh
-
-#run the shell
-#number of parties {3,4,5,7,9,10}, if you want to change it, you can directly change the k_values in the shell script
-#logarithm of set size from 10 to 12, step 2
-./autoTestPK.sh -start 10 -end 12 -step 2
-```
-
 
 
 
