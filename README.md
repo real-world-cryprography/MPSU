@@ -140,7 +140,7 @@ Run PK-MPSU of 3 parties, each with set size `2^12`:
 ```
 ## Auto Test
 
-### Auto Test for SKMPSU
+### Auto Test for SK-MPSU
 
 If you want to use the automated test scripts we provide, you first need to complete the building step and then follow the instructions below.
 
@@ -158,7 +158,7 @@ chmod +x autoTestSK.sh
 ./autoTestSK.sh -start 10 -end 12 -step 2
 ```
 
-### Auto Test for PKMPSU
+### Auto Test for PK-MPSU
 
 If you want to use the automated test scripts we provide, you first need to complete the building step and then follow the instructions below.
 
