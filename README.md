@@ -138,11 +138,11 @@ Run PK-MPSU of 3 parties, each with set size `2^12`:
 ./main -preGen -k 3 -nn 12 -r 0 & ./main -preGen -k 3 -nn 12 -r 1 & ./main -preGen -k 3 -nn 12 -r 2
 ./main -psu -k 3 -nn 12 -r 0 & ./main -psu -k 3 -nn 12 -r 1 & ./main -psu -k 3 -nn 12 -r 2
 ```
-## Auto Test
+### Automated Testing
 
-### Auto Test for SK-MPSU
+We also provide automated scripts to test both SK-MPSU and PK-MPSU, allowing for quick and efficient evaluation across different configurations.
 
-If you want to use the automated test scripts we provide, you first need to complete the building step and then follow the instructions below.
+#### SK-MPSU Auto Test
 
 ```shell
 #in MPSU/autoTestShell
@@ -153,14 +153,12 @@ cp autoTestSK.sh ../SKMPSU/build/
 chmod +x autoTestSK.sh
 
 #run the shell script
-#number of parties {3,4,5,7,9,10}, if you want to change it, you can directly change the k_values in the shell script
-#logarithm of set size from 10 to 12, step 2
+# - number of parties: {3,4,5,7,9,10}, if you want to change it, you can modify the k_values in shell script
+# - logarithm of set size: from 10 to 12, step size of 2
 ./autoTestSK.sh -start 10 -end 12 -step 2
 ```
 
-### Auto Test for PK-MPSU
-
-If you want to use the automated test scripts we provide, you first need to complete the building step and then follow the instructions below.
+### PK-MPSU Auto Test
 
 ```shell
 #in MPSU/autoTestShell
@@ -171,21 +169,19 @@ cp autoTestPK.sh ../PKMPSU/build/
 chmod +x autoTestPK.sh
 
 #run the shell
-#number of parties {3,4,5,7,9,10}, if you want to change it, you can directly change the k_values in the shell script
-#logarithm of set size from 10 to 12, step 2
+# - number of parties: {3,4,5,7,9,10}, if you want to change it, you can modify the k_values in shell script
+# - logarithm of set size: from 10 to 12, step size of 2
 ./autoTestPK.sh -start 10 -end 12 -step 2
 ```
 ## Docker Quick Start
 
-Docker makes it easy to create, deploy, and run applications by using containers. Here are some quick tips to get you started with Docker:
+Docker simplifies the setup and execution of our MPSU protocols by providing a pre-configured environment. Follow these steps to get started:
 
 ### Prerequisites
 
-- Ensure you have Docker installed on your machine. You can download Docker from the [official website](https://www.docker.com/products/docker-desktop).
+- Ensure the Docker is installed on your machine. You can download Docker from the [official website](https://www.docker.com/products/docker-desktop).
 
-### Pulling the docker image
-
-To pull the Docker image, use the following command:
+### Pulling the Docker image
 
 ```bash
 docker pull kafei2cy/mpsu:latest
@@ -193,32 +189,32 @@ docker pull kafei2cy/mpsu:latest
 
 ### Running a Docker Container
 
-To run a Docker container from the image you pulled and access the Container Shell, use the following command:
+To create and start a container from the downloaded image, use:
 
 ```sh
 docker run -it --name your-container-name kafei2cy/mpsu /bin/bash
 ```
 
-- `--name your-container-name` gives your container a name for easier reference.
+- Replace `--name your-container-name` with a preferred container name.
 
-### Test for SK-MPSU
+### Runing SK-MPSU in Docker
 
 ```shell
 cd /home/MPSU/SKMPSU/build/
 #in /home/MPSU/SKMPSU/build/
 #print help information
 ./main -h
-#The other commands are the same as above
+# The other commands remain the same as described earlier
 ```
 
-### Test for PK-MPSU
+### Runing PK-MPSU in Docker
 
 ```shell
 cd /home/MPSU/PKMPSU/build/
 #in /home/MPSU/PKMPSU/build/
 #print help information
 ./main -h
-#The other commands are the same as above
+# The other commands remain the same as described earlier
 ```
 
 
